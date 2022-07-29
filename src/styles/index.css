@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+a.active {
+    @apply text-white bg-amber-700 rounded md:text-amber-700 md:bg-transparent md:font-bold md:p-0
+}
+
+.navv {
+    @apply bg-amber-100 text-amber-800 px-2.5 py-0.5 rounded
+}
+
+.containerr {
+    @apply max-w-full mx-3 sm:mx-4 md:max-w-2xl lg:max-w-4xl md:mx-auto
+}
+
+.hero {
+    @apply min-h-screen flex items-center flex-col md:flex-row pt-10 sm:pt-6 md:pt-0
+}
+
+.heroLeft {
+    @apply order-2 md:order-1
+}
+
+.heroRight {
+    @apply order-1 md:order-2
+}
+
+.heroDesc {
+    @apply flex bg-amber-100 text-amber-600 font-semibold items-center w-[120px] rounded-full pl-3 py-1
+}
+
+.heroDesc span {
+    @apply text-xs block mr-2
+}
+
+.heroDesc img {
+    @apply bg-white rounded-full
+}
+
+.heroTitle {
+    @apply text-5xl md:text-6xl font-semibold mt-2 mb-1 md:mt-6 md:mb-4 text-gray-800
+}
+
+.heroTitle span {
+    @apply text-amber-600
+}
+
+.hero-subTitle {
+    @apply text-sm text-gray-400 font-semibold
+}
+
+.hero button {
+    @apply block mt-4 shadow focus:outline-none text-white bg-amber-500 hover:bg-amber-600 focus:ring-4 focus:ring-amber-300 font-semibold rounded-lg text-sm px-5 py-2.5 mb-2
+}
+
+.bestImg {
+    @apply rounded-full
+}
+
+.bestBtn {
+    @apply absolute bottom-5 right-5 shadow focus:outline-none text-white bg-amber-500 hover:bg-amber-600 focus:ring-4 focus:ring-amber-300 font-semibold rounded-full px-3 py-1 text-lg
+}
+
+.detailContainer {
+    @apply md:max-w-2xl lg:max-w-4xl md:mx-auto
+}
+
+.detail {
+    @apply min-h-screen relative md:flex md:items-center md:flex-row sm:pt-6 md:pt-0
+}
+
+.detailLeft {
+    @apply md:mr-2 md:flex-1 absolute top-0 md:relative
+}
+
+.detailRight {
+    @apply md:ml-2 md:flex-1 absolute bottom-0 bg-white w-full p-5 md:p-0 md:relative rounded-t-2xl md:rounded-none
+}
+
+.detailLeft img {
+    @apply h-screen md:rounded-xl md:h-80 w-full object-cover
+}
+
+.detail button {
+    @apply block mt-4 shadow focus:outline-none text-white bg-amber-500 hover:bg-amber-600 focus:ring-4 focus:ring-amber-300 font-semibold rounded-lg text-sm px-5 py-2.5 mb-2
+}
