@@ -11,7 +11,7 @@
                 </div>
                 <h1 class="heroTitle">Order your favourite <span>foods</span></h1>
                 <span class="hero-subTitle">Fresh and testy food dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
-                <button type="button">Order Now</button>
+                <router-link to="/foods">Order Now</router-link>
             </div>
             <div class="flex-1 heroRight">
                 <img src="../assets/hero.png" alt="">
@@ -24,6 +24,7 @@
             <popular-foods 
                 v-for="product in products" 
                 :key="product.id"
+                :kode="product.kode"
                 :img="product.gambar"
                 :title="product.nama"
                 :price="product.harga"
