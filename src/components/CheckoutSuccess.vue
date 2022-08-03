@@ -7,7 +7,7 @@
             <div class="-mt-80 md:-mt-36 text-center">
                 <h2 class="text-xl font-semibold">Mohon tunggu ya!</h2>
                 <span class="">Pesanan kamu sedang diproses</span>
-                <router-link to="/" class="block mt-3 mx-10 py-2 text-white bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-amber-300 font-medium rounded-full text-sm">Back to home</router-link>
+                <router-link to="/order" class="block mt-3 mx-10 py-2 text-white bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-amber-300 font-medium rounded-full text-sm">My order</router-link>
             </div>
         </div>
     </div>

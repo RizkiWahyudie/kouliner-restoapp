@@ -93,7 +93,7 @@ export default {
             items.forEach((item) => {
                 const key = item.key;
                 const data = item.val();
-                order.push({
+                order.unshift({
                     key: key,
                     dateOrder: data.dateOrder,
                     timeOrder: data.timeOrder,
