@@ -27,34 +27,36 @@
                     </div>
                 </div>
                 <div class="px-4 py-2 text-sm bg-slate-100">
-                    <div class="flex justify-between">
-                        <div class="flex items-center">
-                            <font-awesome-icon icon="fa-solid fa-calendar-days" class="text-white bg-slate-700 text-xs p-1 rounded-full" />
-                            <span class="block text-sm ml-1">{{ order.dateOrder }}</span>
-                        </div>
-                        <div class="flex items-center">
-                            <span class="block text-sm ml-1">{{ order.timeOrder }}</span>
-                        </div>
-                    </div>
-                    <div v-if="order.state" class="">
-                        <div class="flex justify-between py-2">
-                            <p>No. Meja</p>
-                            <p>{{ order.noMeja }}</p>
-                        </div>
-                        <div class="border-dashed border-b-2 mb-2"></div>
-                        <div v-for="makanan in order.listOrder" :key="makanan.key" class="mb-2">
-                            <div class="flex justify-between">
-                                <span class="font-semibold">{{ makanan.products.nama }} ({{ makanan.jumlah_pesanan }})</span>
-                                <span>{{ convert(makanan.totalHarga) }}</span>
-                            </div>
-                            <p class="text-xs block ml-3">Catatan: {{ makanan.keterangan }}</p>
-                        </div>
-                        <div class="border-dashed border-b-2 mb-2"></div>
+                    <transition-group name="animate">
                         <div class="flex justify-between">
-                            <span>Total Bayar</span>
-                            <span class="font-bold">{{ convert(order.bayar) }}</span>
+                            <div class="flex items-center">
+                                <font-awesome-icon icon="fa-solid fa-calendar-days" class="text-white bg-slate-700 text-xs p-1 rounded-full" />
+                                <span class="block text-sm ml-1">{{ order.dateOrder }}</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="block text-sm ml-1">{{ order.timeOrder }}</span>
+                            </div>
                         </div>
-                    </div>
+                        <div v-if="order.state" class="">
+                            <div class="flex justify-between py-2">
+                                <p>No. Meja</p>
+                                <p>{{ order.noMeja }}</p>
+                            </div>
+                            <div class="border-dashed border-b-2 mb-2"></div>
+                            <div v-for="makanan in order.listOrder" :key="makanan.key" class="mb-2">
+                                <div class="flex justify-between">
+                                    <span class="font-semibold">{{ makanan.products.nama }} ({{ makanan.jumlah_pesanan }})</span>
+                                    <span>{{ convert(makanan.totalHarga) }}</span>
+                                </div>
+                                <p class="text-xs block ml-3">Catatan: {{ makanan.keterangan }}</p>
+                            </div>
+                            <div class="border-dashed border-b-2 mb-2"></div>
+                            <div class="flex justify-between">
+                                <span>Total Bayar</span>
+                                <span class="font-bold">{{ convert(order.bayar) }}</span>
+                            </div>
+                        </div>
+                    </transition-group>
                 </div>
             </div>
         </div>

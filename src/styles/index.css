@@ -29,6 +29,38 @@ a.active {
     @apply text-white bg-amber-700 rounded md:text-amber-700 md:bg-transparent md:font-bold md:p-0
 }
 
+.animate-enter-active{
+  /* transition: all 0.1s ease-out; */
+    animation: enter-transition 0.3s ease-in;
+}
+.animate-leave-active{
+  /* transition: all 0.1s ease-out; */
+    animation: leave-transition 0.3s ease-in;
+}
+@keyframes enter-transition {
+    0% {
+        transform: translateY(0)
+    }
+    70% {
+        transform: translateY(10px)
+    }
+    100% {
+        transform: translateY(0)
+    }
+}
+
+@keyframes leave-transition {
+    0% {
+        transform: translateY(0)
+    }
+    20% {
+        transform: translateY(10px)
+    }
+    100% {
+        transform: translateY(0)
+    }
+}
+
 .navv {
     @apply bg-amber-100 text-amber-800 px-2.5 py-0.5 rounded
 }
